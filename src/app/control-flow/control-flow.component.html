@@ -1,0 +1,18 @@
+<h1>Aula sobre Controle de Fluxo</h1>
+@if (user == 'Admin') {
+  <p>Bem vindo, Administrador!</p>
+}@else if(user == 'Gerente'){
+  <p>Bem vindo, Gerente!</p>
+}@else {
+  <p>Bem vindo, Usuário</p>
+}
+
+<ul>
+  @for (usuario of users; track usuario) {
+    <li>
+      {{usuario.user}}
+     -
+     {{usuario.role}}
+    </li>
+  }
+</ul>
